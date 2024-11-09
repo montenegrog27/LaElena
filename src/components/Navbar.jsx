@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../assets/logo/logo.png";
 
 const Navbar = () => (
-  <nav className="bg-green-800 text-white p-4">
+  <nav className="bg-VerdeNavbarradiente text-white p-4">
     <div className="container mx-auto flex justify-between items-center">
-      <h1 className="text-xl font-bold">La Elena</h1>
+      <img src={logo} />
       <input
         type="text"
         placeholder="Buscar productos..."
