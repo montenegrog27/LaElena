@@ -1,21 +1,14 @@
 import axios from "axios";
 
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
-  auth: {
-    username: import.meta.env.VITE_WC_CONSUMER_KEY,
-    password: import.meta.env.VITE_WC_CONSUMER_SECRET,
-  },
-});
-
 export const fetchProducts = async () => {
-  const response = await api.get("/products");
+  const response = await axios.get("http://localhost:3000/api/products");
   return response.data;
 };
 
 export const createOrder = async (orderData) => {
-  const response = await api.post("/orders", orderData);
+  const response = await axios.post(
+    "http://localhost:3000/api/orders",
+    orderData
+  );
   return response.data;
 };
-
-export default api;
