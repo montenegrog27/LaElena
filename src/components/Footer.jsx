@@ -2,7 +2,7 @@ import React from "react";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { LuPhone } from "react-icons/lu";
 
-import logoSelftech from "../assets/logo/logoSelftech.png";
+import logoSelftech from "../assets/logo/logoself.png";
 import logo from "../assets/logo/logo.png";
 
 function Footer() {
