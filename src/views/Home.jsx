@@ -1,28 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { fetchProducts } from "../api/wooComerce";
-import ProductCard from "../components/ProductCard";
+import React from "react";
+import MainSection from "../components/MainSection";
+import RecommendedProducts from "../components/RecommendedProducts";
+import MisionVision from "../components/MisionVision";
+import Footer from "../components/Footer";
+import AllCategories from "../components/AllCategories";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const data = await fetchProducts();
-      setProducts(data);
-    };
-    getProducts();
-  }, []);
-
   return (
-    <div className="container mx-auto">
-      <h1 className="text-2xl font-bold text-center my-8">
-        Productos recomendados
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+    <div>
+      <MainSection />
+      <RecommendedProducts />
+      <MisionVision />
+      <RecommendedProducts />
+      <AllCategories />
+      <Footer />
     </div>
   );
 };
